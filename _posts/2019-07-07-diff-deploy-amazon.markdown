@@ -1,6 +1,7 @@
 ---
 layout: post
-title:  "differential deploy to Amazon S3 from BitBucket"
+title:  "Differential deploy to Amazon S3 from BitBucket"
+description: Deploy to S3 only what has change between to tags.
 date:   2019-07-07 17:10:27 +0200
 categories: bitbucket, pipes, deployment, differential, deploy
 ---
