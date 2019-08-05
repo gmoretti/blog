@@ -74,9 +74,6 @@ def lambda_handler(event, context):
         'statusCode': 200,
         'body': json.dumps('Avinode Hook was executed!')
     }
-
-#This call is important since starts the whole process.
-lambda_handler(1,2)
 ```
 ## Feedback through Slack
 Now that we have our call code, we can use the same process of calling an external service to call Slack API and send a message to our team channel with the response. To get credentials to do so, you will have to go over the steps on Slack to create a new Salck APP and install it in your team's Slack workspace. You can follow the [official slack docs](https://api.slack.com/messaging/sending) for this. 
