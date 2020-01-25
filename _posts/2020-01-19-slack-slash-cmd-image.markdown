@@ -5,8 +5,7 @@ description: An slash command in Slack + AWS that responds with an image with te
 date:   2020-01-25 14:01:20 +0200
 ---
 
-After bein able to successfully send back messages back to Slack, another chance to itengrate Slack with AWS came up.
-The idea was simple, I had an image to which I wanted to add arbitrary text from Slack. I envisioned this as creating a call from Slack with [Slack Slash Commands](https://api.slack.com/interactivity/slash-commands) and simply answer it with [AWS Lambda](https://aws.amazon.com/es/lambda/features/)... with a twist.
+After being able to successfully send messages back to Slack, another chance to itengrate Slack with AWS came up. The idea was simple, I had an image to which I wanted to add arbitrary text. I envisioned this as creating a call from Slack with [Slack Slash Commands](https://api.slack.com/interactivity/slash-commands) and simply answer it with [AWS Lambda](https://aws.amazon.com/es/lambda/features/)... but....NO.
 
 ## The idea
 
