@@ -3,7 +3,6 @@ layout: post
 title:  "Image manipulation Slack slash command with AWS"
 description: An slash command in Slack + AWS that responds with an image with text sended as parameter.
 date:   2020-01-25 14:01:20 +0200
-categories: lambda, aws, slack, serverless, image, S3, API Gateway, SNS
 ---
 
 After bein able to successfully send back messages back to Slack, another chance to itengrate Slack with AWS came up.
@@ -47,11 +46,11 @@ With all this the flow should look something like this:
 
 The idea for the Gateway configuration is to get Slack request proxied straight to the lambda. The reason behind this is what we previusoly said about the Slack slash command request type. The standard configuration to attach an AWS API Gateway to a lambda funtion is via a method (say GET or POST), the gateway expects a payload to be in json, if not it crashes and the request never gets to the lambda. I was able to solve this issue by usin the proxy configuration while configuring a new resource.
 
-![proxy resource 1](assets/images/slash-commm-1.PNG "proxy resource 1")
+![proxy resource 1]({{ site.baseurl }}/assets/images/slash-commm-1.PNG "proxy resource 1")
 
 The configuration to sned the request to the lambda it's also pretty straightforward.
 
-![proxy resource 2](assets/images/slash-commm-2.PNG "proxy resource 2")
+![proxy resource 2]{{ site.baseurl }}/(assets/images/slash-commm-2.PNG "proxy resource 2")
 
 #### Proxy Lambda function
 
@@ -185,7 +184,7 @@ crete a new Topic. **Just fill the Name and Description and leave the rest for n
 Now the important part, once the Topic is created we need to create a **New Subscription** for this topic, and select our
 subscriber lambda here.
 
-![proxy resource 3](assets/images/slash-commm-3.PNG "proxy resource 3")
+![proxy resource 3]({{ site.baseurl }}/assets/images/slash-commm-3.PNG "proxy resource 3")
 
 This is how we will get our lambda executed every time there's a new request in the queue.
 

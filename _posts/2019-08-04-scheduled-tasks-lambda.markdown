@@ -3,7 +3,6 @@ layout: post
 title:  "Scheduled REST call with AWS Lambda and Slack feedback"
 description: Use Amazon Lambda to create scripts and execute them automatically.
 date:   2019-08-04 20:00:00 +0200
-categories: scheduled, task, lambda, aws, slack, serverless, cron
 ---
 
 The reason behind this short post came for two reasons. First, one of our recurrent tasks at work was making a call to a REST service to create a web-hook to it. Second, I've been playing around with Amazon Web Services for a while and thought that Lambdas were a perfect service for running simple scripts. I did some research and of course I was not the only one. Once this process is done we usually inform that it's ready via slack message, so I also thought it could be cool to get that done too.
