@@ -193,5 +193,12 @@ Altought being a cool approach to test all theese technologies, i'm pretty sure 
 one when realising my image processing was taking so long for Slack, 3 secs should be enough in my opinion.
 In any case I have learned a lot, I hope you do too.
 
+## UPDATE
+
+The way lambdas are executed in AWS the state of some variables can get shared across execution, in this case
+I think the engine for the image manipulation has state that will leak and it probably should be taken inside the 
+actual function. More on that here:
+
+[Maintaining global state in AWS Lambda functions with Async Hooks](https://blog.scottlogic.com/2019/03/04/lambda-global-state.html)
 
 Any thoughts?, feel free to contact me, **thank you!**
