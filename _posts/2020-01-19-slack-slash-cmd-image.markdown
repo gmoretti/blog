@@ -172,7 +172,7 @@ so you will need something like this to deploy the files from you local environm
 ```sh
 aws lambda update-function-code --function-name your-lambda-name --zip-file fileb://the-zip-with-the-code.zip --region us-east-1
 ```
-This requires you first **zip your code**, so a tiny script does the both could become handy at this point, and also,
+This AWS-CLI command requires you first **zip your code**, so a tiny script does the both could become handy at this point, and also,
 if the intention is to automate the whole deploy for example.
 
 #### Amazon SNS configuration
