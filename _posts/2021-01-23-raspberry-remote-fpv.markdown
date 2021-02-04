@@ -3,6 +3,7 @@ layout: post
 title:  "FPV robot with Raspberry Pi"
 description: Simple raspberry pi zero robot USB rechargable and accessible through Internet via web-sockets.
 date:   2021-02-04 22:01:21 +0100
+image: "https://morettigiuseppe.com/blog_assets/pi-car.jpg"
 ---
 
 Not so long ago I bought one of those [Amazon 2WD robot kits with a frame and 2 motors](https://www.amazon.es/diymore-inteligente-velocidad-seguimiento-Neum%C3%A1tico/dp/B076BPY2L3). These motors work straightforward with the Raspberry Pi's Motor API provided that you have a motor control Bridge like [this one](https://www.amazon.es/Neuftech-Puente-conductor-controlador-arduino/dp/B01KBTNHS6) interfacing with them.
