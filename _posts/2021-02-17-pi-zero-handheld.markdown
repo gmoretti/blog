@@ -4,6 +4,7 @@ title:  "Building my own retro game handheld"
 description: 3d printed Raspberry Pi Zero W Retropie Handheld
 date:   2022-05-15 00:12:00 +0200
 ---
+![prototype]({{ site.baseurl }}/assets/images/game-boy/final.jpg "prototype")
 
 So, after going through the thingiverse library looking for cool prints, I thought one of the coolest was [Adafruit's Pi GRRL Zero](https://learn.adafruit.com/pigrrl-zero). I liked the shape, it was compact but big enough
 to have a confortable grip.
