@@ -2,18 +2,20 @@
 layout: post
 title:  "Building my own retro game handheld"
 description: 3d printed Raspberry Pi Zero W Retropie Handheld
-date:   2020-03-23 12:00:00 +0200
+date:   2022-05-15 00:12:00 +0200
 ---
 
-So, after going through the thingiverse library looking for cool prints, I thought one of the coolest was [Adafruit's Pi GRRL Zero](). I liked the shape, it was compact but big enough
-to have a confortable grip. Other cool projects like [this tiny handheld]() looked super cool but too tiny!.
+So, after going through the thingiverse library looking for cool prints, I thought one of the coolest was [Adafruit's Pi GRRL Zero](https://learn.adafruit.com/pigrrl-zero). I liked the shape, it was compact but big enough
+to have a confortable grip.
 
-[pi ggrl zero foto][tiny gameboy project photo]
+![prototype](https://cdn-learn.adafruit.com/guides/cropped_images/000/001/262/medium640/pigrrlzero-left.jpg "prototype")
 
 This design was pretty cool but I thought the screen was a little too small, and since the Pi GRRL had a whole guide on how to build the handheld, some assembling videos, and even some software and scripts, I decided to remix the case. It was an excellent reference taking into account my rough experience with electronics.
 
 # Prototyping
-I started by assembing the components in a protoboard, connecting the raspberry and the screen and check configurations. I alse did a fresh installation of RetroPie in my RpiZero. [TODO]poner foto de la proto
+![prototype]({{ site.baseurl }}/assets/images/game-boy/proto-small.jpg "prototype")
+
+I started by assembing the components in a protoboard, connecting the raspberry and the screen and check configurations. I alse did a fresh installation of RetroPie in my RpiZero. 
 
 ## Screen
 The trickiest past here was to wire properly depending on the LCD you have and to compile the right driver. My screen was a 3.5' LCD like [this one](https://es.aliexpress.com/item/32847628219.html). 
@@ -24,8 +26,6 @@ I took the source code for [this drivers](https://github.com/juj/fbcp-ili9341) a
 cmake -DSPI_BUS_CLOCK_DIVISOR=6 -DGPIO_TFT_DATA_CONTROL=25 -DGPIO_TFT_RESET_PIN=27 -DGPIO_TFT_BACKLIGHT=18 -DSTATISTICS=0 -DBACKLIGHT_CONTROL=ON -DUSE_DMA_TRANSFERS=OFF -DILI9341=ON
 ```
 This, plus a "ili9341 wiring pi zero" search on google images gave me a hint on how to wire the screen to the PiZero.
-
-![prototype]({{ site.baseurl }}/assets/images/game-boy/proto-small.jpg "prototype")
 
 ## Buttons
  For the buttons once again Adafruit and the PiGRRL to the rescue. They have a super easy to install script to configure the GPIO pins to work as buttons, through a configuration file I was able to identify which PIN was used for what button. Just following the steps from Adafruit, as a reminder, PIN and GPIO ports are different things, so it's nice to have the schematics for the Pi on hand. I left the config file as follow:
@@ -67,9 +67,17 @@ ENTER     23  # 'Start' button; PiTFT Button 3
 
  You can finde the button installer here: https://learn.adafruit.com/retro-gaming-with-raspberry-pi/adding-controls-software
 
+## Battery
+For the batery I used a LiPo from AliExpress and also charge controller from the same shop. These were really easy to use and cheap. I have used them in many projects already and worked like a chard, So I just had to fit the controller and the baterry properly in the case.
+
+Example of the battery type: https://es.aliexpress.com/item/4000369075771.html
+And the USB charge controller: https://es.aliexpress.com/item/4000956074114.html
+
 # Case design
 ## Components
-The approach for the case was first to lay all the components I was going to use and model them in the Fusion 360 to have them as reference for the design. I also used GrabCAD to get premodeled components (the Pi the screen, etc) [TODO] foto componentes
+The approach for the case was first to lay all the components I was going to use and model them in the Fusion 360 to have them as reference for the design. I also used GrabCAD to get premodeled components (the Pi the screen, etc) 
+
+![dist]({{ site.baseurl }}/assets/images/game-boy/distribution.jpg "dist")
 
 ## Model 
 I followed Noe\'s PiGRRL tutorial https://www.youtube.com/watch?v=uVGKswaW5OQ but changed the parts that I was interested on changing: Screen size and fitting the components I had. My buttons were solded into proto PCBs that I cut myself.
@@ -77,16 +85,20 @@ I took several prints to get the right size, and the case has a fundamental flaw
 
 An improvement I will consider would be making a snapping case. I did some test but my skills in Fusion 360 were not fit for this task.
 
-[TODO]foto del modelado
+![dist]({{ site.baseurl }}/assets/images/game-boy/Captura.PNG "dist")
+![dist]({{ site.baseurl }}/assets/images/game-boy/Captura2.PNG "dist")
+![dist]({{ site.baseurl }}/assets/images/game-boy/Captura3.PNG "dist")
 
 All the STL files can be found in Thingiverse: https://www.thingiverse.com/thing:5385477
 
 ## Assembling
+
+![dist]({{ site.baseurl }}/assets/images/game-boy/assemble.jpg "dist")
+
 Possibly the most painful part of this project was soldering the cables to the PI, soldering the rest of the cables and then fitting all those cables. Of course designing and using a prefab PCB would have been much easier, but, what's the fun in that.
 For closing the case with screen, my printer does not have enough resolution for designing the threads, so Google to the rescue. By heating my M3 screws and then slowly screw them into the plastic, I was able to make them. Now it's not by all means strong and durable, I had to be very careful when taking them out, not to break them, but it did the trick.
 
 Another assembling issue was that the crews for the TFT were too long, so I had to print some spacers so make them fit.
-
 
 # Play!
 Of course as the PiGRRL I installed RetrPie image and a couple of games to test. This was actually the easy part, In the same PiGRRL guide I followed some tips to increase performance. Most games are playable but in some cases I did notice some performance issues. Hopefully in the next iteration of the PiZero I'll have enough horse power for SNES and Games Boy which at the end of the day are the ones I enjoy the most.
