@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post_with_comments
 title:  "Building my own retro game handheld"
 description: 3d printed Raspberry Pi Zero W Retropie Handheld
 date:   2022-05-15 00:12:00 +0200
