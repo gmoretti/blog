@@ -60,11 +60,11 @@ I was interesting to notice how the whole communication was simpler than it felt
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">multiplayer from 2 different machines, server handling collisions and interpolation between states. I do have some syncing issues after 10+min because of drfting clock tho <a href="https://twitter.com/hashtag/GodotEngine?src=hash&amp;ref_src=twsrc%5Etfw">#GodotEngine</a> <a href="https://twitter.com/hashtag/gamedev?src=hash&amp;ref_src=twsrc%5Etfw">#gamedev</a> 🤓 thanks <a href="https://twitter.com/GamedevStefan?ref_src=twsrc%5Etfw">@GamedevStefan</a> for the amazin tutorials 👏👏 <a href="https://t.co/zKdkcuIR4j">pic.twitter.com/zKdkcuIR4j</a></p>&mdash; Giuseppe Moretti (@gmoretti) <a href="https://twitter.com/gmoretti/status/1553760728582168579?ref_src=twsrc%5Etfw">July 31, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 
-    - Basics on the high level networking implementation in Godot: Remote Procedure Calls
-    - Keeping clients and server synchronized, signaling back and forth
-    - Have a lobby stage where game starts and can be sychronized
-    - Have the server deal with collisions as a source of truth and inform clients
-    - Tilemaps for creating 2D levels
+- Basics on the high level networking implementation in Godot: Remote Procedure Calls
+- Keeping clients and server synchronized, signaling back and forth
+- Have a lobby stage where game starts and can be sychronized
+- Have the server deal with collisions as a source of truth and inform clients
+- Tilemaps for creating 2D levels
 
 # Whats next
 The most difficult part for me was the clock and interpolation part. i would like to create a new project and just code again the multiplayer sync part, understanding how to improve it and why I am getting sync issues after some time connected into a game.  
