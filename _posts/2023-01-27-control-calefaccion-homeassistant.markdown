@@ -38,13 +38,13 @@ Se pueden encontrar instrucciones en la web de Home Assistant para la instalaci�
 
 ### ESP32
 Cualquier ESP32 debería funcionar. Se puede comprobar en [la página de ESPHome](https://esphome.io/index.html) Los míos son de AliExpress.
-También se puede encontrar en amazon: https://amzn.to/3jewNUA
+También se puede encontrar en amazon: [https://amzn.to/3jewNUA](https://amzn.to/3jewNUA)
 
 ### Módulo Relé 
-La mayoría funciona igual, los míos son de Amazon https://amzn.to/3HEgEBy
+La mayoría funciona igual, los míos son de Amazon [https://amzn.to/3HEgEBy](https://amzn.to/3HEgEBy)
 
 ### Termómetro 
-Este componente es el que usaremos para basar el control de temperatura. Tenía unos de Xiaomi que se pueden conectar a Home Assistant [con este tutorial](https://www.youtube.com/watch?v=5BEhAQwM0A0). Concretamente, el modelo es: https://es.aliexpress.com/item/1005005054100936.html
+Este componente es el que usaremos para basar el control de temperatura. Tenía unos de Xiaomi que se pueden conectar a Home Assistant [con este tutorial](https://www.youtube.com/watch?v=5BEhAQwM0A0). Concretamente, el modelo es: [https://es.aliexpress.com/item/1005005054100936.html](https://es.aliexpress.com/item/1005005054100936.html)
 
 
 
