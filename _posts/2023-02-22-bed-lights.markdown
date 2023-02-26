@@ -36,14 +36,6 @@ Para conectar la placa a la tira de led necesitaremos 3 puntos. Un GPIO para con
 
 ![myroom]({{ site.baseurl }}/assets/images/bed-lights/circuito.jpg "my room")
 
-
-<div style="width:100%;height:480px;background-color:black;text-align:center;">
-  <video style="height:50%;" controls>
-    <source src="https://lh3.googleusercontent.com/uVnrVMIjCbXwZ93-Ak9pHeZQY5ibRPNfmnoLjp3xtY2Uu0AaVTFw3K05LMRB51bG3MkEKgkzmsZXGsU2mmUEG6UHjzIi5kNcNOkjdToaG36utpq4PKdOl9T7VTrpGi22ZiNv15TONkg=m18" type="video/mp4">
-  </video>
-</div>
-
-
 De este paso hay muchos videos, por ejemplo: https://www.youtube.com/watch?v=TOEnFKLm9Sw
 
 # Configuración en Home Assistant
