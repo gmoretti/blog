@@ -38,10 +38,11 @@ Para conectar la placa a la tira de led necesitaremos 3 puntos. Un GPIO para con
 
 
 <div style="width:100%;height:480px;background-color:black;text-align:center;">
-  <video style="height:100%;" controls>
-    <source src="https://lh3.googleusercontent.com/Zbd_4siBfTh4SCcTXvFf0x0x2NisfZhP39K89BPMsx4hcqsn5EwpB0dkp9OvvyFp-RYWLnDfhUkWS_8D9-YJOotCS77QotdCP5oICF_6vtyXMKSc14HWf1Jcm46qMu2N2m6Op5zSYn8=m18" type="video/mp4">
+  <video style="height:50%;" controls>
+    <source src="https://lh3.googleusercontent.com/uVnrVMIjCbXwZ93-Ak9pHeZQY5ibRPNfmnoLjp3xtY2Uu0AaVTFw3K05LMRB51bG3MkEKgkzmsZXGsU2mmUEG6UHjzIi5kNcNOkjdToaG36utpq4PKdOl9T7VTrpGi22ZiNv15TONkg=m18" type="video/mp4">
   </video>
 </div>
+
 
 De este paso hay muchos videos, por ejemplo: https://www.youtube.com/watch?v=TOEnFKLm9Sw
 
@@ -111,7 +112,7 @@ El nombre de la acción no es relevante, mientras sea el mismo que leamos desde 
 
 # Caja impresa en 3D
 Para encapsular el circuito diseñé una caja simple con cierre por imanes.
-![3DPrintedBox]({{ site.baseurl }}/assets/images/boiler/box.png "3D printed box")
+![3DPrintedBox]({{ site.baseurl }}/assets/images/bed-lights/box.PNG "3D printed box")
 
 
 # Siguiente pasos
