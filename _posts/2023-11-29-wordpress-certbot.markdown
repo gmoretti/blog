@@ -107,8 +107,8 @@ server {
         ssl_session_timeout 5m;
         ssl_session_cache shared:SSL:50m;
         ssl_session_tickets off;
-        ssl_certificate /etc/nginx/letsencrypt/live/luablu.es/fullchain.pem;
-        ssl_certificate_key /etc/nginx/letsencrypt/live/luablu.es/privkey.pem;
+        ssl_certificate /etc/nginx/letsencrypt/live/domain.com/fullchain.pem;
+        ssl_certificate_key /etc/nginx/letsencrypt/live/domain.com/privkey.pem;
         add_header Strict-Transport-Security "max-age=31536000" always;
 
         location / {
