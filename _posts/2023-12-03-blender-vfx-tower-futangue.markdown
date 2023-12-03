@@ -17,6 +17,6 @@ I followed two tutorials for this.
 
 Here is the result. There's several take aways. I need to learn proper lighting, I could match the actual shadows in the footage. I couldn't get a good material for the STONE. I would like the stome to be similar as the mountain. As if it was extracted from it. But is a start.
 
-<video muted autoplay controls>
-    <source width="560" height="315" src="https://morettigiuseppe-blog-files.s3.eu-west-3.amazonaws.com/tower_in_futangue_vfx_reverse0001-0373.mp4" type="video/mp4">
+<video width="560" height="315" muted autoplay controls>
+    <source src="https://morettigiuseppe-blog-files.s3.eu-west-3.amazonaws.com/tower_in_futangue_vfx_reverse0001-0373.mp4" type="video/mp4">
 </video>
