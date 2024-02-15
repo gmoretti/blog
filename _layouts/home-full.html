@@ -13,7 +13,7 @@ layout: default
     🇬🇧 Hi!, welcome to my quiet corner on the Internet where I try to organize any recent work in progress, 
     things that I have learned, rant a little bit or maybe show my last music endeavour. 
     <br \> 
-    🇪🇸 Hola!, bienvenido a mi rincor de pensar del Internet, donde intento organizar pensamientos, proyectos 
+    🇪🇸 Hola!, bienvenido a mi rincon de pensar del Internet, donde intento organizar pensamientos, proyectos 
     o alguna que otra música. 
     <br \> 
     <br \> 
@@ -22,20 +22,35 @@ layout: default
 
     <ul class="post-list h-feed">
       {%- for post in site.posts -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-          <a href="{{ post.url | relative_url }}">
-            Permalink
-          </a>
-        </h3>
-        {{  post.content }}
-        
-      </li>
+      <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+          <h3>
+            <a class="post-link p-name" itemprop="name headline" href="{{ post.url | relative_url }}">
+              {{ post.title | escape }}
+            </a>
+            <a href="{{ post.url | relative_url }}">
+              Permalink
+            </a>
+          </h3>
+          <p class="post-meta">
+            <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+              {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+              {{ post.date | date: date_format }}
+            </time>
+      
+            <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+              <span class="p-author h-card" itemprop="name" hidden>Giuseppe Moretti</span>
+              </span>
+            </span>
+          </p>
+        </header>
+      
+        <div class="post-content e-content" itemprop="articleBody">
+          {{ post.content }}
+        </div>
+  
+      </article>
       {%- endfor -%}
     </ul>
 
