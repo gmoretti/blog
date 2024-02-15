@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+<div class="home">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+
+  {%- if site.posts.size > 0 -%}
+    🇬🇧 Hi!, welcome to my quiet corner on the Internet where I try to organize any recent work in progress, 
+    things that I have learned, rant a little bit or maybe show my last music endeavour. 
+    <br \> 
+    🇪🇸 Hola!, bienvenido a mi rincor de pensar del Internet, donde intento organizar pensamientos, proyectos 
+    o alguna que otra música. 
+    <br \> 
+    <br \> 
+
+    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+
+    <ul class="post-list h-feed">
+      {%- for post in site.posts -%}
+      <li>
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+          <a href="{{ post.url | relative_url }}">
+            Permalink
+          </a>
+        </h3>
+        {{  post.content }}
+        
+      </li>
+      {%- endfor -%}
+    </ul>
+
+    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+  {%- endif -%}
+
+</div>
