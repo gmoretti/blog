@@ -12,7 +12,7 @@ So, once again, Google is saying goodbye to another service. Websites attached t
 
 My parents have [a rental cabin by the lake](https://lagoyluz.com), and my mom took advantage of this easy service of google, where you can quickly create a website so it gets linked in the Google Maps and well, and it works as a standalone website for all purposes. These pasts few weeks I've been reading a lot about small/indie web and how companies do take most of oue information with them when they shut down. An specially sad website I came across it's the [google graveyard](https://killedbygoogle.com/) which lists all companies Google has killed.
 
-My parents received a notice from google that they are shuting down these pages soon and gave no other option than just creating a new one form services like Wix. Which is not at all good nor an easy solution. <https://support.google.com/business/answer/14368911?hl=en>
+They received a notice from google that they are shuting down these pages soon and gave no other option than just creating a new one form services like Wix. Which is not at all good nor an easy solution. <https://support.google.com/business/answer/14368911?hl=en>
 
 ![googles_options]({{ site.baseurl }}/assets/images/options.png "Wix, Shopify and others offered as alternative places to create a website")
 
