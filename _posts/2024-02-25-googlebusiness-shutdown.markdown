@@ -9,9 +9,9 @@ date:   2024-02-25 16:20:00 +0100
 
 So, once again, Google is saying goodbye to another service. Websites attached to the businesses profile you can create from Google Maps map points
 
-My parents have [a rental cabin by the lake](https://lagoyluz.com), and my mom took advantage of this easy service of google, where you can quickly create a website so it gets linked in the Google Maps and well, and it works as a standalone website for all purposes. These pasts few weeks I've been reading a lot about small/indie web and how companies do take most of oue information with them when they shut down. An specially sad website I came across the google graveyard site https://killedbygoogle.com/ which lists all companies Google has killed.
+My parents have [a rental cabin by the lake](https://lagoyluz.com), and my mom took advantage of this easy service of google, where you can quickly create a website so it gets linked in the Google Maps and well, and it works as a standalone website for all purposes. These pasts few weeks I've been reading a lot about small/indie web and how companies do take most of oue information with them when they shut down. An specially sad website I came across the google graveyard site <https://killedbygoogle.com/> which lists all companies Google has killed.
 
-My parents receive the notice from google that they are shuting down these pages and gave no other option than just creating a new one form services like Wix. Which is not at all good nor an easy solution. https://support.google.com/business/answer/14368911?hl=en
+My parents receive the notice from google that they are shuting down these pages and gave no other option than just creating a new one form services like Wix. Which is not at all good nor an easy solution. <https://support.google.com/business/answer/14368911?hl=en>
 
 ![googles_options]({{ site.baseurl }}/assets/images/options.png "Wix, Shopify and others offered as alternative places to create a website")
 
@@ -26,7 +26,7 @@ The cloned index.html itself was absolutely bloated with google's javascript tra
 
 I copied to a static folder behind my nginx reverse proxy and created a certificate for it with Let's encrypt (which gave me some trouble cause I forgot again how the acme challenges worked). And after a few hours I had my own version of the website working under a new domain with SSL
 
-https://lagoyluz.com
+<https://lagoyluz.com>
 
 Regarding the dynamic content, I will have to think in some backend or static build for my parent to be able to push new reviews they want to share and change the photographs
 
@@ -36,8 +36,8 @@ Now more than ever, I am feeling strong about walled gardens and the impact of t
 It is true though that an effort is required to make this process of self hosting or domain name driven identity more technically affordable, or at least portable. Like the technologies like Small Tech Foundation https://small-tech.org/ is developing, and even more as more high level services where spawning you digital identity with your own domain at home is a matter of a few clicks, just as easy as getting a new phone number.
 
 ## related links
-https://boffosocko.com/2017/07/28/an-introduction-to-the-indieweb/
+<https://boffosocko.com/2017/07/28/an-introduction-to-the-indieweb/>
 
-https://small-tech.org/
+<https://small-tech.org/>
 
-https://blog.morettigiuseppe.com/articles.html From when I helped to render the cabin's blueprints
+<https://blog.morettigiuseppe.com/articles.html> From when I helped to render the cabin's blueprints
