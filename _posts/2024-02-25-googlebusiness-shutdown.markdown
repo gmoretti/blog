@@ -16,7 +16,7 @@ My parents receive the notice from google that they are shuting down these pages
 
 ![googles_options]({{ site.baseurl }}/assets/images/options.png "Wix, Shopify and others offered as alternative places to create a website")
 
-Since my mom put effort on creating this website, I wanted to save it somehow, so I taught, since it's basically static website with some dynamic comments, to create a local copy with wget and host it on my VPS under a new domain name I bought for the occasion: lagoyluz.com
+Since my mom put effort on creating this website, I wanted to save it somehow, so I thought, since it's basically static website with some dynamic comments, to create a local copy with wget and host it on my VPS under a new domain name I bought for the occasion: lagoyluz.com
 
 ```bash
 wget --adjust-extension -H -k -K -p https://lagoyluz.negocio.site 
