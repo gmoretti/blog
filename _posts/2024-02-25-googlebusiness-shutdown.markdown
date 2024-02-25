@@ -3,6 +3,7 @@ layout: post_with_comments
 title:  "Migrating before Google Business websites shutdown"
 description: Another service that goes down and takes you work with it
 date:   2024-02-25 16:20:00 +0100
+image: "https://lagoyluz.com/lh3.googleusercontent.com/p/AF1QipMUK2ahO4YOlEz0l_vQSrg-IZVRpxFyhGF2YEgl=w768-h768-n-o-v1"
 ---
 
 <img class="d11Ssd" src="https://lagoyluz.com/lh3.googleusercontent.com/p/AF1QipMUK2ahO4YOlEz0l_vQSrg-IZVRpxFyhGF2YEgl=w768-h768-n-o-v1">

@@ -17,3 +17,9 @@
 <meta name="twitter:image" content="{{ site.title_image }}">
 {% endif %}
 <!-- end of Twitter cards -->
+<!-- open graph meta-->
+{% if page.image %}
+  <meta property="og:image" content="{{ page.image }}">
+{% else %}
+  <meta property="og:image" content="{{ site.title_image }}">
+{% endif %}
