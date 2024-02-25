@@ -9,21 +9,22 @@ date:   2024-02-25 16:20:00 +0100
 
 So, once again, Google is saying goodbye to another service. Websites attached to the businesses profile you can create from Google Maps map points
 
-My parents have [a rental cabin by the lake](https://lagoyluz.com), and my mom took advantage of this easy service of google, where you can quickly create a website so it gets linked in the Google Maps and well, it works as a standalone for all purposes. These pasts weeks I've been reading a lot about small/indie web and how they do take everything with them when they shut down, and I came across the google graveyard site https://killedbygoogle.com/ 
-My parents receive the notice from google that they are shuting down this pages and gave no other option than just creating a new one form services like Wix. Which is not at all good nor an easy solution. https://support.google.com/business/answer/14368911?hl=en
+My parents have [a rental cabin by the lake](https://lagoyluz.com), and my mom took advantage of this easy service of google, where you can quickly create a website so it gets linked in the Google Maps and well, and it works as a standalone website for all purposes. These pasts few weeks I've been reading a lot about small/indie web and how companies do take most of oue information with them when they shut down. An specially sad website I came across the google graveyard site https://killedbygoogle.com/ which lists all companies Google has killed.
 
-![googles_options]({{ site.baseurl }}/assets/images/jellyfin-esp-power-up/Captura.PNG "Wix, Shopify and others offered as alternative places to create a website")
+My parents receive the notice from google that they are shuting down these pages and gave no other option than just creating a new one form services like Wix. Which is not at all good nor an easy solution. https://support.google.com/business/answer/14368911?hl=en
 
-Since my mom put effort on creating this website, I want it to save it somehow, so I taught, since it's basically static website with some dynamic comments, to create a local copy with wget and host it on my VPS under a new domain name I bought for the occasion: lagoyluz.com
+![googles_options]({{ site.baseurl }}/assets/options.png "Wix, Shopify and others offered as alternative places to create a website")
+
+Since my mom put effort on creating this website, I wanted to save it somehow, so I taught, since it's basically static website with some dynamic comments, to create a local copy with wget and host it on my VPS under a new domain name I bought for the occasion: lagoyluz.com
 
 ```bash
 wget --adjust-extension -H -k -K -p https://lagoyluz.negocio.site 
 ```
-I found these parameters to work best on downloading also some resources that were used like CSS and Fonts, and some images. You can explored in the wget docs
-https://blog.morettigiuseppe.com/articles.html
-The index itself was absolutely bloated with JS tracking code and completely unfriendly code. I made a first pass of removing some scripting I thought not necessary for my clone, and manage to cut it down to a still not very nice 3500 lines of a lot of garbage. Anyway, everything was displayed and working except for the navigation menu and its links, That I did not investigate why in the cloned version did not worked so I just added my own Javascript to cover links and anchors
+I found these parameters to work best to download also some resources that were needed like CSS and Fonts, and some images. You can check the wget docs for the details on each parameter.
 
-I copied to a static folder behind my nginx reverse proxy and created a certificate for it with Let's encrypt (which gave me some trouble cause I forgot again how the challenges worked). And after a few hours I had my own version of the website working under a new domain with SSL
+The cloned index.html itself was absolutely bloated with google's javascript tracking code and it was completely unfriendly. I made a first pass of removing some scripting I thought not necessary for my clone, and manage to cut it down to a still not very nice 3500 lines of a lot of garbage. Anyway, everything was displayed and working except for the navigation menu and its links, which I did not investigate why in the cloned version did not worked so I just added my own Javascript to cover links and anchor functionality
+
+I copied to a static folder behind my nginx reverse proxy and created a certificate for it with Let's encrypt (which gave me some trouble cause I forgot again how the acme challenges worked). And after a few hours I had my own version of the website working under a new domain with SSL
 
 https://lagoyluz.com
 
