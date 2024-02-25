@@ -13,7 +13,7 @@ My parents have [a rental cabin by the lake](https://lagoyluz.com), and my mom t
 
 My parents receive the notice from google that they are shuting down these pages and gave no other option than just creating a new one form services like Wix. Which is not at all good nor an easy solution. https://support.google.com/business/answer/14368911?hl=en
 
-![googles_options]({{ site.baseurl }}/assets/options.png "Wix, Shopify and others offered as alternative places to create a website")
+![googles_options]({{ site.baseurl }}/assets/images/options.png "Wix, Shopify and others offered as alternative places to create a website")
 
 Since my mom put effort on creating this website, I wanted to save it somehow, so I taught, since it's basically static website with some dynamic comments, to create a local copy with wget and host it on my VPS under a new domain name I bought for the occasion: lagoyluz.com
 
