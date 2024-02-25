@@ -34,7 +34,8 @@ Regarding the dynamic content, I will have to think in some backend or static bu
 ##  notes
 
 Now more than ever, I am feeling strong about walled gardens and the impact of trusting them with your information, work and time, just to be let down once they decide to shutdown x or y service for no reason other than not making billions a year.
-It is true though that an effort is required to make this process of self hosting or domain name driven identity more technically affordable, or at least portable. Like the technologies like Small Tech Foundation https://small-tech.org/ is developing, and even more as more high level services where spawning you digital identity with your own domain at home is a matter of a few clicks, just as easy as getting a new phone number.
+It is true, though, that an effort is required to make this process of self hosting or domain name driven identity more technically affordable. 
+We need more services like the ones being developed by the Small Tech Foundation https://small-tech.org/, and go even further with high level services where spawning you digital identity with your own domain at home is a matter of a few clicks, just as easy as getting a new phone number.
 
 ## related links
 <https://boffosocko.com/2017/07/28/an-introduction-to-the-indieweb/>
