@@ -12,11 +12,11 @@ So, once again, Google is saying goodbye to another service. Websites attached t
 
 My parents have [a rental cabin by the lake](https://lagoyluz.com), and my mom took advantage of this easy service of google, where you can quickly create a website so it gets linked in the Google Maps and well, and it works as a standalone website for all purposes. These pasts few weeks I've been reading a lot about small/indie web and how companies do take most of oue information with them when they shut down. An specially sad website I came across it's the [google graveyard](https://killedbygoogle.com/) which lists all companies Google has killed.
 
-My parents receive the notice from google that they are shuting down these pages and gave no other option than just creating a new one form services like Wix. Which is not at all good nor an easy solution. <https://support.google.com/business/answer/14368911?hl=en>
+My parents received a notice from google that they are shuting down these pages soon and gave no other option than just creating a new one form services like Wix. Which is not at all good nor an easy solution. <https://support.google.com/business/answer/14368911?hl=en>
 
 ![googles_options]({{ site.baseurl }}/assets/images/options.png "Wix, Shopify and others offered as alternative places to create a website")
 
-Since my mom put effort on creating this website, I wanted to save it somehow, so I thought, since it's basically static website with some dynamic comments, to create a local copy with wget and host it on my VPS under a new domain name I bought for the occasion: lagoyluz.com
+Since my mom put effort on creating this website, I wanted to save it somehow, so I thought, since it's basically static website with some dynamic comments, to create a local copy with wget and host it on my VPS under a new domain name I bought for the occasion: <lagoyluz.com>S
 
 ```bash
 wget --adjust-extension -H -k -K -p https://lagoyluz.negocio.site 
