@@ -10,7 +10,9 @@ image: "https://lagoyluz.com/lh3.googleusercontent.com/p/AF1QipMUK2ahO4YOlEz0l_v
 
 So, once again, Google is saying goodbye to another service. Websites attached to the businesses profile you can create from Google Maps map points
 
-My parents have [a rental cabin by the lake](https://lagoyluz.com), and my mom took advantage of this easy service of google, where you can quickly create a website so it gets linked in the Google Maps and well, it also works as a standalone website for all purposes. These pasts few weeks I've been reading a lot about small/indie web and how companies do take most of our data with them when they shut down. A particularly sad website I came across it's the [google graveyard](https://killedbygoogle.com/) which lists all companies Google has killed.
+My parents have [a rental cabin by the lake](https://lagoyluz.com), and my mom took advantage of this easy service of google, where you can quickly create a website so it gets linked in the Google Maps and well, it also worked as a standalone website for all intents and purposes. 
+
+These pasts few weeks I've been reading a lot about small/indie web and how companies do take most of our data with them when they shut down. A particularly sad website I came across it's the [google graveyard](https://killedbygoogle.com/) which lists all companies Google has killed.
 
 They received a notice from google that they are shuting down these pages soon and gave no other option than just creating a new one form services like Wix. Which is not at all good nor an easy solution. <https://support.google.com/business/answer/14368911?hl=en>
 
