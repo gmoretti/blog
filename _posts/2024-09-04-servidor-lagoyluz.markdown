@@ -8,7 +8,7 @@ image: "https://blog.morettigiuseppe.com/assets/images/server-lago/a93c90ad-970e
 ![A93C90AD-970E-4AC9-A76E-249532B45C54.jpg]({{ site.baseurl }}/assets/images/server-lago/a93c90ad-970e-4ac9-a76e-249532b45c54.jpg)
 *Laguna Pitreño, Parque Futangue, Lago Ranco, Chile (-40.367191473920016, -72.31136991962883)*    
    
-Ya he hablado antes de [la cabaña y del lugar donde viven mis padres.](http://lagoyluz.com) En el área rural donde están no llega ninguna tipo de conexión a internet por cable. Por tanto solo queda Internet móvil 4G o satelital, como Starlink.    
+Ya he hablado antes de [la cabaña y del lugar donde viven mis padres.](http://lagoyluz.com) En el área rural donde están no llega ningún tipo de conexión a internet por cable. Por tanto solo queda Internet móvil 4G o satelital, como Starlink.    
 
 Todas las veces que he estado ahí he trabajado con 4G, y a pesar que la conexión es buena y tiene velocidad suficiente para hacer *streaming* de videos,  durante el día es bastante común que baje la velocidad o directamente no haya red.
 
