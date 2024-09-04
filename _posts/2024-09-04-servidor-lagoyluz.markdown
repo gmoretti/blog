@@ -227,9 +227,7 @@ sudo docker compose up -d
 ```
 Una vez levantado podremos a acceder a el con la IP\_Del\_server:9094 y dentro podremos ir enlazando unos a uno los servicio poniendo la IP del server y el puerto de cada uno de los servicios, estos están en la config de cada uno. También podemos poner enlaces a otros servicio con cualquier URL que nos parezcan relevantes.   
 ![image.png]({{ site.baseurl }}/assets/images/server-lago/image_8.png)    
-El montaje final quedó asi provisionalmente (router, servidor y disco duro), aunque despues los movimos todo dentro de un armario.   
-   
-  ![IMG\_3853.jpg]({{ site.baseurl }}/assets/images/server-lago/img_3853.jpg)    
+
 # Clientes    
 ## Tele   
 Desde la tele lo más facil es instalar la aplicación de Jellyfin si es compatible con la tele. En mi caso son GoogleTV y la aplicación es nativa y la mayoría de contenido se puede ver directamente sin transcoding. Cuando el cliente no soporta el formato, el servidor debe transformar el contenido primero, y dependiendo de los recursos del server puede no funcionar del todo bien.     
@@ -261,4 +259,4 @@ Se puede configurar que una cierta lista esté conectada con el sistema de desca
 
 También es posibles usar otras listas automáticas por ejemplo de POPULARES para tener siempre películas descargando.   
    
-Con todo esto al menos quedauna buena alternativa mientras llega a conexión por cable al lugar. Y también ya tenemos un servidor habilitado donde se podrían instalar otras aplicaciones.
+Con todo esto, nos quedamos con una aceptable alternativa a la espera de la conexión por cable al lugar. Y también ya tenemos un servidor habilitado donde se podrían instalar otras aplicaciones.
