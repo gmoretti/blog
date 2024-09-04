@@ -43,7 +43,7 @@ Para todas las aplicaciones instaladas y descritas aquí se usaron contenedores 
 #### Servarr   
 Servarr es la colección de aplicaciones encargas de automatizar la descarga de contenido y subtítulos. Se pueden agrupar y arrancar todas a la vez. Lo más importante de este fichero de configuración es que la estructura y el directorio donde se guarda todo sea el mismo y use igual para todas las aplicaciones. En este ejemplo todo esta bajo el directorio DATA, que es el mismo para todas las aplicaciones, excepto Transmission que necesitara luego un mapeo de directorio en las aplicaciones que lo usen.   
    
-```
+```yaml
 version: "3.2"
 services:
   radarr:
@@ -157,23 +157,23 @@ data/torrent
 data/torrent/downloads   
    
 Necesitamos crear una red virtual donde estarán todos estos servicios. Lo hacemos con:   
-```
+```bash
 sudo docker network create media-services
 
-```
+```bash
 Puede que no se necesite pero creo recordar que me dio errores no dar acceso a los directorios:   
-```
+```bash
 sudo chmod 775 -R /data
 ```
 Ahora ya podemos arrancar los servicios (navegamos hasta donde esta el directorio DATA) y:    
-```
+```bash
 sudo docker compose up -d 
 ```
 Luego de esto se debe configurar cada servicio individualmente en sus respectivas paginas. Esto lo podemos hacer en un navegador en un ordenador también conectado a la red. Los pormenores de cada servicio están mucho mejor explicados en la WIKI de Servarr. [https://wiki.servarr.com/](https://wiki.servarr.com/)    
 #### Jellyfin   
 Vamos a usar Jellyfin como el reproductor y para acceder y organizar toda la colección que se vaya descargando.    
 Creamos otro directorio donde poner el siguiente docker-compose.yml. un /jellyfin bastará.   
-```
+```yaml
 version: '3.5'
 services:
   jellyfin:
@@ -195,7 +195,7 @@ services:
       - 'host.docker.internal:host-gateway'
 ```
 Lo mas importante es el volume: source indica la ruta completa hasta el directorio donde están las película y las series. Mientras que target sera el directorio que veremos desde dentro de jellyfin cuando configuremos que carpetas son películas y que carpetas son series. Levantamos:   
-```
+```bash
 sudo docker compose up -d 
 ```
 Para configurar Jellyfin también mejor la documentación oficial [https://jellyfin.org/docs/general/quick-start/](https://jellyfin.org/docs/general/quick-start/) Es bastante intuitivo. El servidor estará en   
@@ -203,7 +203,7 @@ http://ip\_del\_server:8096
  
 #### Heimdall   
 Heimdall nos hará las veces de portal, para poder acceder fácilmente a todos los servicios que hemos instalado.   
-```
+```yaml
 services:
   heimdall:
     image: lscr.io/linuxserver/heimdall:latest
@@ -223,7 +223,7 @@ networks:
     external: true
 
 ```
-```
+```bash
 sudo docker compose up -d 
 ```
 Una vez levantado podremos a acceder a el con la IP\_Del\_server:9094 y dentro podremos ir enlazando unos a uno los servicio poniendo la IP del server y el puerto de cada uno de los servicios, estos están en la config de cada uno. También podemos poner enlaces a otros servicio con cualquier URL que nos parezcan relevantes.   
