@@ -17,30 +17,30 @@ Esto se vuelve especialmente irritante al usar  servicios de *streaming* de más
 La diferencia era en la inmediatez. Se decidía que ver, se encolaba la descarga, y se veía después tranquilamente.   
 Con éste principio, un servidor de segunda mano, un router 4G, Docker y algunas apps open source, se podría tener un Netflix sin conexión para cuando nuestra conexión es lenta o intermitente.   
    
-# Las opciones de conexión   
-## ¿Por qué no Starlink?   
+## Las opciones de conexión   
+### ¿Por qué no Starlink?   
 Starlink tiene un valor mensual más caro y un equipo específico que se debe pagar de entrada. Unos 300€ si es reacondicionado y la mensualidad unos 45€. Creo que se justifica más si nos encontramos en una zona donde ni siquiera tenemos cobertura celular.   
-## Operadoras rurales   
+### Operadoras rurales   
 Las operadoras rurales funcionan con enlaces inalámbricos a larga distancia, pero sus velocidades son menores a las de la red 4G o iguales. Pero su precio mensual es más caro que un contrato de datos móviles, por lo que tampoco se justifica. Aunque podría ser más estable, en el sentido que no se afectado por el alto trafico como la red de telefonía.   
-## Router 4G    
+### Router 4G    
 ![image.png]({{ site.baseurl }}/assets/images/server-lago/image.png)    
 Con esta opción lo único extra fue un router 4G TP-Link TL-MR6400. Lo principal a tener en cuenta con éste tipo de dispositivo es las frecuencias en las que trabaja. La versión que compré era Europa y lo iba a instalar en otro país, por lo que las bandas pueden coincidir o no. En este caso solo una banda (banda 7) coincidió, que ya es funcional, pero hubiera estado bien haber tenido al menos una banda más de respaldo.   
 Existen aplicaciones para el móvil que indican a que bandas se esta conectando el teléfono, y puede servir como primera aproximación.   
-### Mejorar la conexión con repetidores y antenas externas. 
+#### Mejorar la conexión con repetidores y antenas externas. 
 Compré también dos antenas. Un repetidor 4G y un antena multi banda externa. Ninguna de las dos dio resultado alguno y las antenas internas del *router* 4G probaron ser las más efectivas.   
-# El Servidor   
+## El Servidor   
 El ordenador que usé como servidor fue un ASUS E510 de segunda mano (80€). Las especificaciones :   
 - Intel i5   
 - 4GB RAM   
 - Sin Disco interno, usé un disco mecánico de 1TB (30€ segunda mano) por USB en una carcasa externa.   
 - La conexión al router por cable.   
    
-## Aplicaciones   
-### Ubuntu Server   
+### Aplicaciones   
+#### Ubuntu Server   
 Como sistema operativo, quedó ligero y arranca relativamente rápido a pesar de arrancar desde USB.   
-### Docker   
+#### Docker   
 Para todas las aplicaciones instaladas y descritas aquí se usaron contenedores de Docker. Se puede seguir las instrucciones oficiales para la instalación.   
-### Servarr   
+#### Servarr   
 Servarr es la colección de aplicaciones encargas de automatizar la descarga de contenido y subtítulos. Se pueden agrupar y arrancar todas a la vez. Lo más importante de este fichero de configuración es que la estructura y el directorio donde se guarda todo sea el mismo y use igual para todas las aplicaciones. En este ejemplo todo esta bajo el directorio DATA, que es el mismo para todas las aplicaciones, excepto Transmission que necesitara luego un mapeo de directorio en las aplicaciones que lo usen.   
    
 ```
@@ -170,7 +170,7 @@ Ahora ya podemos arrancar los servicios (navegamos hasta donde esta el directori
 sudo docker compose up -d 
 ```
 Luego de esto se debe configurar cada servicio individualmente en sus respectivas paginas. Esto lo podemos hacer en un navegador en un ordenador también conectado a la red. Los pormenores de cada servicio están mucho mejor explicados en la WIKI de Servarr. [https://wiki.servarr.com/](https://wiki.servarr.com/)    
-### Jellyfin   
+#### Jellyfin   
 Vamos a usar Jellyfin como el reproductor y para acceder y organizar toda la colección que se vaya descargando.    
 Creamos otro directorio donde poner el siguiente docker-compose.yml. un /jellyfin bastará.   
 ```
@@ -201,7 +201,7 @@ sudo docker compose up -d
 Para configurar Jellyfin también mejor la documentación oficial [https://jellyfin.org/docs/general/quick-start/](https://jellyfin.org/docs/general/quick-start/) Es bastante intuitivo. El servidor estará en   
 http://ip\_del\_server:8096   
  
-### Heimdall   
+#### Heimdall   
 Heimdall nos hará las veces de portal, para poder acceder fácilmente a todos los servicios que hemos instalado.   
 ```
 services:
@@ -229,33 +229,33 @@ sudo docker compose up -d
 Una vez levantado podremos a acceder a el con la IP\_Del\_server:9094 y dentro podremos ir enlazando unos a uno los servicio poniendo la IP del server y el puerto de cada uno de los servicios, estos están en la config de cada uno. También podemos poner enlaces a otros servicio con cualquier URL que nos parezcan relevantes.   
 ![image.png]({{ site.baseurl }}/assets/images/server-lago/image_8.png)    
 
-# Clientes    
-## Tele   
+## Clientes    
+### Tele   
 Desde la tele lo más fácil es instalar la aplicación de Jellyfin si es compatible con la tele. En mi caso son GoogleTV y la aplicación es nativa y la mayoría de contenido se puede ver directamente sin transcoding. Cuando el cliente no soporta el formato, el servidor debe transformar el contenido primero, y dependiendo de los recursos del server puede no funcionar del todo bien.     
 
 Los subtístulos también deberían estar en ficheros externos y no encapsulados dentro del archivo de video, para facilitar su visionado.   
-## Ordenadores   
+### Ordenadores   
 Los ordenadore o cualquier dispositivo con navegador, puede entrar con la url directamente http://ip*del*Server:8096   
-## Teléfonos   
+### Teléfonos   
 Moviles y tablets pueden entrar con la app de Jellyfin.   
-# Disminuyendo tráfico   
-### Limitar hora de descarga   
+## Disminuyendo tráfico   
+#### Limitar hora de descarga   
 Para prevenir saturar la poca conexión durante el dia se puede limitar la descarga durante el día en Transmission (http://ipDelServer:9091):   
 ![image.png]({{ site.baseurl }}/assets/images/server-lago/image_b.png)    
-### Extensiones en dispositivos   
+#### Extensiones en dispositivos   
 Otra manera de limitar trafico y para aprovechar al máximo la conexión es instalar un adblocker en cada dispositivo o uno a nivel de red como un piHole. Pero de eso hablaremos en otro momento.   
 [https://adblockplus.org/](https://adblockplus.org/)    
 [https://www.localcdn.org/](https://www.localcdn.org/)    
    
 Usando RSS readers también es una manera de agilizar conexiones lentas. Para situaciones donde la conexión es mínima, se eliminar completamente JavaScript que es los que suele pesar más, a costa de que las web apps dejen de funcionar, pero útil para lectura:   
 [https://noscript.net/getit/](https://noscript.net/getit/)    
-# Bonus: Wiki para documentación   
+## Bonus: Wiki para documentación   
 Aprovechando la infraestructura instale una instancia de [https://www.dokuwiki.org/dokuwiki](https://www.dokuwiki.org/dokuwiki)    
 Perfecta para dejar documentado de manera sencilla algunos pasos y instrucciones del servidor.   
 Es fácil de instalar y los documentos se guardan también en ficheros de texto y no en base de datos.   
    
-# Next steps   
-### Usar listas de TRAKT TV   
+## Next steps   
+#### Usar listas de TRAKT TV   
 Este servició hace un seguimiento de lo que ves y puedes guardar tus listas.   
 Se puede configurar que una cierta lista esté conectada con el sistema de descarga para que todo lo de esa lista se descargue automáticamente. De esta manera no habría que acceder a Radarr o Sonarr en ningún momento.   
 
