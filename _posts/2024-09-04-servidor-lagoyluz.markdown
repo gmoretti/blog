@@ -5,8 +5,6 @@ description: Automatizar descarga para ver contenido sin conexión
 date:   2024-09-04 13:00:00 +0200
 image: "{{ site.baseurl }}/assets/images/server-lago/a93c90ad-970e-4ac9-a76e-249532b45c54.jpg"
 ---
-
-# Streaming local para situaciones de poca conexión   
 ![A93C90AD-970E-4AC9-A76E-249532B45C54.jpg]({{ site.baseurl }}/assets/images/server-lago/a93c90ad-970e-4ac9-a76e-249532b45c54.jpg)
 *Laguna Pitreño, Parque Futangue, Lago Ranco, Chile (-40.367191473920016, -72.31136991962883)*    
    
@@ -28,7 +26,7 @@ Las operadoras rurales funcionan con enlaces inalámbricos a larga distancia, pe
 ![image.png]({{ site.baseurl }}/assets/images/server-lago/image.png)    
 Con esta opción lo único extra fue un router 4G TP-Link TL-MR6400. Lo principal a tener en cuenta con éste tipo de dispositivo es las frecuencias en las que trabaja. La versión que compré era Europa y lo iba a instalar en otro país, por lo que las bandas pueden coincidir o no. En este caso solo una banda (banda 7) coincidió, que ya es funcional, pero hubiera estado bien haber tenido al menos una banda más de respaldo.   
 Existen aplicaciones para el móvil que indican a que bandas se esta conectando el teléfono, y puede servir como primera aproximación.   
-### **Mejorar la conexión con repetidores y antenas externas.**   
+### Mejorar la conexión con repetidores y antenas externas. 
 Compré también dos antenas. Un repetidor 4G y un antena multi banda externa. Ninguna de las dos dio resultado alguno y las antenas internas del *router* 4G probaron ser las más efectivas.   
 # El Servidor   
 El ordenador que usé como servidor fue un ASUS E510 de segunda mano (80€). Las especificaciones :   
