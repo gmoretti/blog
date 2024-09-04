@@ -2,7 +2,7 @@
 layout: post_with_comments
 title:  "Streaming local para situaciones de poca conexión"
 description: Automatizar descarga y ver después sin conexión
-date:   2024-09-04 13:00:00 +0100
+date:   2024-09-04 13:00:00 +0200
 image: "{{ site.baseurl }}/assets/images/server-lago/a93c90ad-970e-4ac9-a76e-249532b45c54.jpg"
 ---
 
