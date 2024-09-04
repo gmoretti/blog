@@ -3,7 +3,7 @@ layout: post_with_comments
 title:  "Streaming local para situaciones de poca conexión"
 description: Automatizar descarga para ver contenido sin conexión
 date:   2024-09-04 13:00:00 +0200
-image: "{{ site.baseurl }}/assets/images/server-lago/a93c90ad-970e-4ac9-a76e-249532b45c54.jpg"
+image: "https://blog.morettigiuseppe.com/assets/images/server-lago/a93c90ad-970e-4ac9-a76e-249532b45c54.jpg"
 ---
 ![A93C90AD-970E-4AC9-A76E-249532B45C54.jpg]({{ site.baseurl }}/assets/images/server-lago/a93c90ad-970e-4ac9-a76e-249532b45c54.jpg)
 *Laguna Pitreño, Parque Futangue, Lago Ranco, Chile (-40.367191473920016, -72.31136991962883)*    
