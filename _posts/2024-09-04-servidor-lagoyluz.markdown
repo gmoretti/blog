@@ -1,7 +1,7 @@
 ---
 layout: post_with_comments
 title:  "Streaming local para situaciones de poca conexión"
-description: Automatizar descarga y ver después sin conexión
+description: Automatizar descarga para ver contenido sin conexión
 date:   2024-09-04 13:00:00 +0200
 image: "{{ site.baseurl }}/assets/images/server-lago/a93c90ad-970e-4ac9-a76e-249532b45c54.jpg"
 ---
@@ -13,11 +13,11 @@ image: "{{ site.baseurl }}/assets/images/server-lago/a93c90ad-970e-4ac9-a76e-249
 Ya he hablado antes de [la cabaña y del lugar donde viven mis padres.](http://lagoyluz.com) En el área rural donde están no llega ninguna tipo de conexión a internet por cable. Por tanto solo queda Internet móvil 4G o satelital, como Starlink.    
 Todas las veces que he estado ahí he trabajado con 4G, y a pesar que la conexión es buena y tiene velocidad suficiente para hacer *streaming* de videos,  durante el día es bastante común que baje la velocidad o directamente no haya red.   
 Esto se vuelve especialmente irritante al usar  servicios de *streaming *de más larga duración que requieren de una conexión estable durante al menos un par de horas, para ver el contenido. Si no se cumplen estas condiciones, nos encontramos con mucho buffering, bajadas de calidad y video pixelado. Entonces pensé que años atrás teníamos conexiones mucho peores que una conexión 4G en casa y aún así veíamos contenido (contenido libre de copyright, por supuesto).   
-La diferencia era en la immediatez. Se decidía que ver, se encolaba la descarga, y se veía después tranquilamente.   
-Con éste principio, un servidor de segunda mano, un router 4G, Docker y algunas apps open source, se podría tener un Netflix offline first para cuando nuestra conexión es lenta o intermitente.   
+La diferencia era en la inmediatez. Se decidía que ver, se encolaba la descarga, y se veía después tranquilamente.   
+Con éste principio, un servidor de segunda mano, un router 4G, Docker y algunas apps open source, se podría tener un Netflix sin conexión para cuando nuestra conexión es lenta o intermitente.   
    
 # Las opciones de conexión   
-## ¿Porqué no Starlink?   
+## ¿Por qué no Starlink?   
 Starlink tiene un valor mensual más caro y un equipo específico que se debe pagar de entrada. Unos 300€ si es reacondicionado y la mensualidad unos 45€. Creo que se justifica más si nos encontramos en una zona donde ni siquiera tenemos cobertura celular.   
 ## Operadoras rurales   
 Las operadoras rurales funcionan con enlaces inalámbricos a larga distancia, pero sus velocidades son menores a las de la red 4G o iguales. Pero su precio mensual es más caro que un contrato de datos móviles, por lo que tampoco se justifica. Aunque podría ser más estable, en el sentido que no se afectado por el alto trafico como la red de telefonía.   
@@ -40,7 +40,7 @@ Como sistema operativo, quedó ligero y arranca relativamente rápido a pesar de
 ### Docker   
 Para todas las aplicaciones instaladas y descritas aquí se usaron contenedores de Docker. Se puede seguir las instrucciones oficiales para la instalación.   
 ### Servarr   
-Servarr es la colección de aplicaciónes encargas de automatizar la descarga de contenido y subtitulos. Se pueden agrupar y arrancar todas a la vez. Lo más importante de este fichero de configuración es que la estructura y el directorio donde se guarda todo sea el mismo y use igual para todas las aplicaciónes. En este ejemplo todo esta bajo el directorio DATA, que es el mismo para todas las aplicaciones, excepto Transmission que necesitara luego un mapeo de directorio en las aplicaciones que lo usen.   
+Servarr es la colección de aplicaciones encargas de automatizar la descarga de contenido y subtítulos. Se pueden agrupar y arrancar todas a la vez. Lo más importante de este fichero de configuración es que la estructura y el directorio donde se guarda todo sea el mismo y use igual para todas las aplicaciones. En este ejemplo todo esta bajo el directorio DATA, que es el mismo para todas las aplicaciones, excepto Transmission que necesitara luego un mapeo de directorio en las aplicaciones que lo usen.   
    
 ```
 version: "3.2"
@@ -155,7 +155,7 @@ Colocamos este fichero docker-compose.yml en el directorio donde queramos que se
 data/torrent   
 data/torrent/downloads   
    
-Necesitamos crear una red virtual donde estaran todos estos servicios. Lo hacemos con:   
+Necesitamos crear una red virtual donde estarán todos estos servicios. Lo hacemos con:   
 ```
 sudo docker network create media-services
 
@@ -193,15 +193,15 @@ services:
     extra_hosts:
       - 'host.docker.internal:host-gateway'
 ```
-Lo mas importante es el volume: source indica la ruta completa hasta el directorio donde están las película y las series. Mientras que target sera el directorio que veremos desde dentro de jellyfin cuando configuremos que carpetas son peliculas y que carpetas son series. Levantamos:   
+Lo mas importante es el volume: source indica la ruta completa hasta el directorio donde están las película y las series. Mientras que target sera el directorio que veremos desde dentro de jellyfin cuando configuremos que carpetas son películas y que carpetas son series. Levantamos:   
 ```
 sudo docker compose up -d 
 ```
-Para configurar Jellyfin también mejor la documentacion oficial [https://jellyfin.org/docs/general/quick-start/](https://jellyfin.org/docs/general/quick-start/) Es bastante intuitivo. El servidor estara en   
+Para configurar Jellyfin también mejor la documentación oficial [https://jellyfin.org/docs/general/quick-start/](https://jellyfin.org/docs/general/quick-start/) Es bastante intuitivo. El servidor estará en   
 http://ip\_del\_server:8096   
  
 ### Heimdall   
-Heimdall nos hará las veces de portal, para poder acceder facilmente a todos los servicios que hemos instalado.   
+Heimdall nos hará las veces de portal, para poder acceder fácilmente a todos los servicios que hemos instalado.   
 ```
 services:
   heimdall:
@@ -230,8 +230,8 @@ Una vez levantado podremos a acceder a el con la IP\_Del\_server:9094 y dentro p
 
 # Clientes    
 ## Tele   
-Desde la tele lo más facil es instalar la aplicación de Jellyfin si es compatible con la tele. En mi caso son GoogleTV y la aplicación es nativa y la mayoría de contenido se puede ver directamente sin transcoding. Cuando el cliente no soporta el formato, el servidor debe transformar el contenido primero, y dependiendo de los recursos del server puede no funcionar del todo bien.     
-Los subtitulos también deberían estar en ficheros externos y no encapsulados dentro del archivo de video, para facilitar su visionado.   
+Desde la tele lo más fácil es instalar la aplicación de Jellyfin si es compatible con la tele. En mi caso son GoogleTV y la aplicación es nativa y la mayoría de contenido se puede ver directamente sin transcoding. Cuando el cliente no soporta el formato, el servidor debe transformar el contenido primero, y dependiendo de los recursos del server puede no funcionar del todo bien.     
+Los subtístulos también deberían estar en ficheros externos y no encapsulados dentro del archivo de video, para facilitar su visionado.   
 ## Ordenadores   
 Los ordenadore o cualquier dispositivo con navegador, puede entrar con la url directamente http://ip*del*Server:8096   
 ## Teléfonos   
@@ -245,17 +245,17 @@ Otra manera de limitar trafico y para aprovechar al máximo la conexión es inst
 [https://adblockplus.org/](https://adblockplus.org/)    
 [https://www.localcdn.org/](https://www.localcdn.org/)    
    
-Usando RSS readers también es una manera de agilizar conexiones lentas. Para situaciones donde la conexión es minima, se eliminar completamente JavaScript que es los que suele pesar más, a costa de que las web apps dejen de funcionar, pero util para lectura:   
+Usando RSS readers también es una manera de agilizar conexiones lentas. Para situaciones donde la conexión es mínima, se eliminar completamente JavaScript que es los que suele pesar más, a costa de que las web apps dejen de funcionar, pero útil para lectura:   
 [https://noscript.net/getit/](https://noscript.net/getit/)    
 # Bonus: Wiki para documentación   
 Aprovechando la infraestructura instale una instancia de [https://www.dokuwiki.org/dokuwiki](https://www.dokuwiki.org/dokuwiki)    
 Perfecta para dejar documentado de manera sencilla algunos pasos y instrucciones del servidor.   
-Es facil de instalar y los documentos se guardan tambien en ficheros de texto y no en base de datos.   
+Es fácil de instalar y los documentos se guardan también en ficheros de texto y no en base de datos.   
    
 # Next steps   
 ### Usar listas de TRAKT TV   
 Este servició hace un seguimiento de lo que ves y puedes guardar tus listas.   
-Se puede configurar que una cierta lista esté conectada con el sistema de descarga para que todo lo de esa lista se descargue automaticamente. De esta manera no habría que acceder a Radarr o Sonarr en ningun momento.   
+Se puede configurar que una cierta lista esté conectada con el sistema de descarga para que todo lo de esa lista se descargue automáticamente. De esta manera no habría que acceder a Radarr o Sonarr en ningún momento.   
 
 También es posibles usar otras listas automáticas por ejemplo de POPULARES para tener siempre películas descargando.   
    
