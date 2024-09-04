@@ -1,5 +1,5 @@
 ---
-layout: post_with_comments
+layout: post
 title:  "Streaming local para situaciones de poca conexión"
 description: Automatizar descarga para ver contenido sin conexión
 date:   2024-09-04 13:00:00 +0200
@@ -262,3 +262,5 @@ Se puede configurar que una cierta lista esté conectada con el sistema de desca
 También es posibles usar otras listas automáticas por ejemplo de POPULARES para tener siempre películas descargando.   
    
 Con todo esto, nos quedamos con una aceptable alternativa a la espera de la conexión por cable al lugar. Y también ya tenemos un servidor habilitado donde se podrían instalar otras aplicaciones.
+
+**Cualquier comentario o sugerencia se puede dejar en [este thread del fediverso](https://social.morettigiuseppe.com/admin/object?ap_id=https%3A%2F%2Fsocial.morettigiuseppe.com%2Fo%2F63fa3155005a44b2bbadff5bb72a781f) **
