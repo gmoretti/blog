@@ -15,7 +15,7 @@ Todas las veces que he estado ahí he trabajado con 4G, y a pesar que la conexi�
 Esto se vuelve especialmente irritante al usar  servicios de *streaming* de más larga duración que requieren de una conexión estable durante al menos un par de horas, para ver el contenido. Si no se cumplen estas condiciones, nos encontramos con mucho buffering, bajadas de calidad y video pixelado. Entonces pensé que años atrás teníamos conexiones mucho peores que una conexión 4G en casa y aún así veíamos contenido (contenido libre de copyright, por supuesto).   
 
 La diferencia era en la inmediatez. Se decidía que ver, se encolaba la descarga, y se veía después tranquilamente.   
-Con éste principio, un servidor de segunda mano, un router 4G, Docker y algunas apps open source, se podría tener un Netflix sin conexión para cuando nuestra conexión es lenta o intermitente.   
+**Con éste principio, un servidor de segunda mano, un router 4G, Docker y algunas apps open source, se podría tener un Netflix sin conexión para cuando nuestra conexión es lenta o intermitente.**
    
 ## Las opciones de conexión   
 ### ¿Por qué no Starlink?   
@@ -263,4 +263,4 @@ También es posibles usar otras listas automáticas por ejemplo de POPULARES par
    
 Con todo esto, nos quedamos con una aceptable alternativa a la espera de la conexión por cable al lugar. Y también ya tenemos un servidor habilitado donde se podrían instalar otras aplicaciones.
 
-**Cualquier comentario o sugerencia se puede dejar en [este thread del fediverso](https://social.morettigiuseppe.com/admin/object?ap_id=https%3A%2F%2Fsocial.morettigiuseppe.com%2Fo%2F63fa3155005a44b2bbadff5bb72a781f) **
+**Cualquier comentario o sugerencia se puede dejar en [este thread del fediverso](https://social.morettigiuseppe.com/admin/object?ap_id=https%3A%2F%2Fsocial.morettigiuseppe.com%2Fo%2F63fa3155005a44b2bbadff5bb72a781f)**
