@@ -11,8 +11,11 @@ image: "{{ site.baseurl }}/assets/images/server-lago/a93c90ad-970e-4ac9-a76e-249
 *Laguna Pitreño, Parque Futangue, Lago Ranco, Chile (-40.367191473920016, -72.31136991962883)*    
    
 Ya he hablado antes de [la cabaña y del lugar donde viven mis padres.](http://lagoyluz.com) En el área rural donde están no llega ninguna tipo de conexión a internet por cable. Por tanto solo queda Internet móvil 4G o satelital, como Starlink.    
-Todas las veces que he estado ahí he trabajado con 4G, y a pesar que la conexión es buena y tiene velocidad suficiente para hacer *streaming* de videos,  durante el día es bastante común que baje la velocidad o directamente no haya red.   
+
+Todas las veces que he estado ahí he trabajado con 4G, y a pesar que la conexión es buena y tiene velocidad suficiente para hacer *streaming* de videos,  durante el día es bastante común que baje la velocidad o directamente no haya red.
+
 Esto se vuelve especialmente irritante al usar  servicios de *streaming* de más larga duración que requieren de una conexión estable durante al menos un par de horas, para ver el contenido. Si no se cumplen estas condiciones, nos encontramos con mucho buffering, bajadas de calidad y video pixelado. Entonces pensé que años atrás teníamos conexiones mucho peores que una conexión 4G en casa y aún así veíamos contenido (contenido libre de copyright, por supuesto).   
+
 La diferencia era en la inmediatez. Se decidía que ver, se encolaba la descarga, y se veía después tranquilamente.   
 Con éste principio, un servidor de segunda mano, un router 4G, Docker y algunas apps open source, se podría tener un Netflix sin conexión para cuando nuestra conexión es lenta o intermitente.   
    
@@ -231,6 +234,7 @@ Una vez levantado podremos a acceder a el con la IP\_Del\_server:9094 y dentro p
 # Clientes    
 ## Tele   
 Desde la tele lo más fácil es instalar la aplicación de Jellyfin si es compatible con la tele. En mi caso son GoogleTV y la aplicación es nativa y la mayoría de contenido se puede ver directamente sin transcoding. Cuando el cliente no soporta el formato, el servidor debe transformar el contenido primero, y dependiendo de los recursos del server puede no funcionar del todo bien.     
+
 Los subtístulos también deberían estar en ficheros externos y no encapsulados dentro del archivo de video, para facilitar su visionado.   
 ## Ordenadores   
 Los ordenadore o cualquier dispositivo con navegador, puede entrar con la url directamente http://ip*del*Server:8096   
