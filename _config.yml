@@ -17,7 +17,7 @@ title: geep
 email: me@morettigiuseppe.com
 description: >- # this means to ignore newlines until "baseurl:"
       mi rinconcito de Internet como los de antes. 
-      <br></br>
+      
       mi huerto digital.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
