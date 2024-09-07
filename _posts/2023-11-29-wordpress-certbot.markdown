@@ -2,7 +2,7 @@
 layout: post_with_comments
 title:  "Wordpress, Nginx Reverse Proxy and Certbot"
 description: 
-date:   2023-11-27 23:07:00 +0200
+date:   2023-11-29 23:07:00 +0200
 ---
 
 ![configuring]({{ site.baseurl }}/assets/images/computer_confused_guy.jpeg "configuring")

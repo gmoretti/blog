@@ -2,7 +2,7 @@
 layout: post_with_comments
 title:  "TV backlight with LED strip and ESPHOME"
 description: Home Assistant integrated TV backlight with ESP32 and WLED
-date:   2023-12-03 15:24:00 +0200
+date:   2023-12-08 17:24:00 +0200
 ---
 
 <video width="315" height="516" controls>

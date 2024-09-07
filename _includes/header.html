@@ -23,7 +23,8 @@
             <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
             {%- endif -%}
           {%- endfor -%}
-          <a class="page-link" href="https://social.morettigiuseppe.com">Social</a>
+          <a class="page-link" rel="author" href="{{ "/" | relative_url }}">home</a>
+          <a class="page-link" href="https://social.morettigiuseppe.com">social</a>
         </div>
       </nav>
     {%- endif -%}

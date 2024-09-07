@@ -2,7 +2,7 @@
 layout: post_with_comments
 title:  "Media Server with Jellyfin with remote power up"
 description: Power Up Jellyfin PC remotely with Home Assistant
-date:   2023-12-01 16:28:00 +0200
+date:   2023-11-30 16:28:00 +0200
 ---
 
 ![media_center]({{ site.baseurl }}/assets/images/jellyfin-esp-power-up/me_and_my_media_center.jpeg "media center")
