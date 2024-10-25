@@ -26,12 +26,12 @@ Para esto usamos una Automation con lo siguiente
 
 ```yaml
 
-alias: Send Erin feed alert when treshold
+alias: Send feed alert when treshold
 description: ""
 trigger:
   - platform: state
     entity_id:
-      - sensor.erin_last_feeding
+      - sensor.baby_last_feeding
     attribute: start
 condition: []
 action:
@@ -44,13 +44,13 @@ action:
         {% endif %}
   - delay: >-
       {{  variableDelay | as_timedelta - (now() -
-      state_attr("sensor.erin_last_feeding", "start") | as_datetime) }}
+      state_attr("sensor.baby_last_feeding", "start") | as_datetime) }}
   - variables:
       criticalLoudNotificationTime: >
         {% if  now() > today_at("06:00") and now() < today_at("23:00")  %}1{%
         else %}0{% endif %}
       message: >-
-        El bebe comió {{states.sensor.erin_last_feeding.state}}ml hace
+        El bebe comió {{states.sensor.baby_last_feeding.state}}ml hace
         {{variableDelay}}h.
       title: Baby feed updates
   - action: notify.mobile_app_iphone
@@ -95,12 +95,12 @@ En control de sueño es más sencillo en tanto que nos interesa el tiempo pasado
 
 ```yaml
 
-alias: Erin sleep window alert
+alias:  sleep window alert
 description: ""
 trigger:
   - platform: state
     entity_id:
-      - sensor.erin_last_sleep
+      - sensor.baby_last_sleep
     attribute: end
 condition:
   - condition: time
@@ -116,7 +116,7 @@ action:
     metadata: {}
     data:
       message: Hace 1h 15m de su ultima siesta
-      title: Erin's sleep updates
+      title: Baby's sleep updates
       data:
         push:
           sound:
@@ -126,7 +126,7 @@ action:
   - action: notify.mobile_app_iphone
     data:
       message: Hace 1h 15m de su ultima siesta
-      title: Erin's sleep updates
+      title: Baby's sleep updates
       data:
         push:
           sound:
