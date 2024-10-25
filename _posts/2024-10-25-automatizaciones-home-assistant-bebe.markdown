@@ -275,4 +275,4 @@ Es más facil configurar en UI que como se ve aqui en YAML.
 Eso es todo por ahora, pero creu que se vienen más automaticaciónes pronto. Estaría bien integrar el asistente de Voz de HA a ver, aunque no se puede activar desde los Home Minis.
 
 
-**Cualquier comentario o sugerencia se puede dejar en [este thread del fediverso]()**
+**Cualquier comentario o sugerencia se puede dejar en [este thread del fediverso](https://social.morettigiuseppe.com/o/7f3c5b48e8304a93a5779d13d8310454)**
