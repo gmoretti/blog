@@ -65,3 +65,6 @@ grep mi-logger /var/log/syslog
 ```
 
 Y eso es todo, es muy facil hacer tareas periodicas asi, sin ningun programa extra a parte de herramientas que se puede encontrar en cualquier maquina.
+
+
+**Cualquier comentario o sugerencia se puede dejar en [este thread del fediverso](https://social.morettigiuseppe.com/o/0942110fcb0544fab61ba461c23a26e6)**
