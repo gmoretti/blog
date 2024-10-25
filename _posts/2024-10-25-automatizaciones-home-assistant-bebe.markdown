@@ -3,6 +3,7 @@ layout: post
 title:  "Home Assistant y el bebé"
 description: "Cositas que han ayudado en casa"
 date:   2024-09-04 13:00:00 +0200
+render_with_liquid: false
 ---
 
 Tenemos un nuevo miembro de la familia en casa y han surgido algunas necesidades que si no se resuelven de manera friki, no vale la pena resolverlas.
