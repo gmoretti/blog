@@ -26,7 +26,7 @@ Necesitamos un recordatorio para cuando ha pasado mucho rato de la última comid
 Para esto usamos una Automation con lo siguiente
 
 ```yaml
-
+{% raw %}
 alias: Send feed alert when treshold
 description: ""
 trigger:
@@ -81,7 +81,7 @@ action:
       message: "{{ message }}"
 mode: restart
 
-
+{% endraw %}
 ```
 
 Lo interesante aqui es **variableDelay** que nos indica cuanto vamos a esperar de la ultima comida dependiendo de noche o día 2 o 3 horas. Despues en **delay** seteamos cuando esperará la automatización antes de enviar la notificación al telefono. Esto el delay de 2h menos el tiempo que ya ha pasado desde el comienzo de la comida (teniendo en cuenta que el registro se hace normalmente al final de la comida).
@@ -95,7 +95,7 @@ Y con esto tenemos un aviso en el movil cuando ha pasado mucho rato desde la út
 En control de sueño es más sencillo en tanto que nos interesa el tiempo pasado desde que terminó la ultima siesta, que es el dato ya como viene desde babyBuddy, asi que solo hay que contar desde que se actualiza el último sueño y ya.
 
 ```yaml
-
+{% raw %}
 alias:  sleep window alert
 description: ""
 trigger:
@@ -136,7 +136,7 @@ action:
             volume: 1
 mode: restart
 
-
+{% endraw %}
 ```
 
 ## Maquina de ruido blanco
@@ -151,7 +151,7 @@ Vamos a ver la configuración en el dashboard.
 
 
 ```yaml
-
+{% raw %}
 square: false
 type: grid
 cards:
@@ -259,7 +259,7 @@ cards:
     name: T
 columns: 3
 title: TV Room
-
+{% endraw %}
 ```
 
 Y la botonera quedaría asi, accesible desde el movil.
