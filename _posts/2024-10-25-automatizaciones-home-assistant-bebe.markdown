@@ -2,7 +2,7 @@
 layout: post
 title:  "Home Assistant y el bebé"
 description: "Cositas que han ayudado en casa"
-date:   2024-09-04 13:00:00 +0200
+date:   2024-10-25 13:00:00 +0200
 render_with_liquid: false
 ---
 

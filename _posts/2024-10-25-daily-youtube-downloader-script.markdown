@@ -2,7 +2,7 @@
 layout: post
 title:  "Programar descarga de videos de una pagina diariamente"
 description: "con un script de Python, yt-dlp y CRON"
-date:   2024-09-04 13:00:00 +0200
+date:   2024-10-25 13:00:00 +0200
 ---
 
 El contexto es el siguiente. Tengo una pagina tipo blog que lista posts de una cierta categoría. Cada enlace de esa lista abre el post y dentro siempre hay lo mismo. Un video embebido. Necesito descargar este video. El video puede ser de diferentes plataformas. Y se van añadiendo nuevos posts diariamente a esta lista.
