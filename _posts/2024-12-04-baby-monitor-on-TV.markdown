@@ -1,24 +1,26 @@
 ---
 layout: post
-title:  "Video Monitor on the corner of my TV"
+title:  "Video feed monitor as a TV notification"
 description: "Frigate, Home Assistant and WebRTC magic"
 date:   2024-12-04 14:00:00 +0200
 ---
 
 ![Notification on TV]({{ site.baseurl }}/assets/images/tv.JPG) 
 
-After installing Frigate and connecting it with Home Assistant, the video feeds are available to do whatever I you want. Meaning, it's time to try to open the baby monitor everywhere I can. This includes the TV. 
+After installing Frigate and connecting it with Home Assistant, the video feeds are available to do whatever you want. Meaning, it's time to try to open the baby monitor everywhere I can. This includes the TV. 
 
-The best article I came across to appreach this is this one. https://seanblanchfield.com/2022/03/realtime-pip-cameras-on-tv-with-home-assistant
+Altought it is possible to send the stream directly to the TV from HA, this stops any media being played in the TV. We do not want that. 
+
+The best article I came across to approach this, (is this one.)[https://seanblanchfield.com/2022/03/realtime-pip-cameras-on-tv-with-home-assistant]
 Thanks to Sean!
-And then this HA thread: https://community.home-assistant.io/t/a-short-guide-for-setting-up-tv-pip-notifications-with-pipup/537084/41
+And then (this HA thread)[https://community.home-assistant.io/t/a-short-guide-for-setting-up-tv-pip-notifications-with-pipup/537084/41]
 
-The idea is the following. Pipup App allows to send Notification to a corner of the TV with REST requests. This request after a few patches from forks of Pipup allow them to be with JavaScript and from a non secured HTTP source. (This is explained in the HA thread above.)
+The idea is the following. Pipup App allows sending Notification to a corner of the TV with REST requests. This request after a few patches from forks of Pipup allow them to be with JavaScript and from a non secured HTTP source. (This is explained in the HA thread above.)
 We configure Home Assistant to send such REST request, so that we have a service in HA we can use on demand.
 
 The main problem I faced was that when I played the stream on top of Netflix, the sound gets muted and there's no way to put it back unless you restart the App. This is too inconvenient for an alarm notification type of scenario. But starting the notification before opening the Netflix stream works fine. So it would work for having a fixed monitor of the feed in the corner.
 
-The page which contains the Stream I took it from go2rtc installation, I had to open the port on my docker config 1984, to be able to access from outside. But there's plenty of features in this control panel. Lots of different streams to use nad configurable pages.
+The page which contains the Stream I took it from go2rtc installation, I had to open the port on my docker config 1984, to be able to access from outside. But there are plenty of features in this control panel. Lots of different streams to use and configurable pages.
 
 To do the automations in Home Assistant, I created two Scripts in HA, one for sending a notification for, say 3h. (to keep it open), and another empty notification of 1s. This last one replaces the former and helps closing the window. The scripts use the Rest Services configured from the tutorial mentioned above.
 
@@ -53,6 +55,6 @@ Then I created a Toggle template in Devices->Helpers that uses the two scripts a
 
 I would have liked Netflix to remain with sound to have the alerts. But this solution works for a general use case.
 
-If I had it working as alerts I would also liked to implement the audio detection for criying in Frigate and have the alert jumping when that happened.
+If I had it working as alerts I would also like to implement the audio detection for crying in Frigate and have the alert jumping when that happened.
 
-**Leave any comments in this Fediverse thread! [este thread del fediverso]()**
+**Leave any comments in this Fediverse thread! [este thread del fediverso](https://social.morettigiuseppe.com/o/480a18be1fef4ffba9043e09e58b4e9a)**
