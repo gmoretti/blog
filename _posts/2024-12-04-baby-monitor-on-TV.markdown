@@ -11,9 +11,9 @@ After installing Frigate and connecting it with Home Assistant, the video feeds 
 
 Altought it is possible to send the stream directly to the TV from HA, this stops any media being played in the TV. We do not want that. 
 
-The best article I came across to approach this, (is this one.)[https://seanblanchfield.com/2022/03/realtime-pip-cameras-on-tv-with-home-assistant]
+The best article I came across to approach this, [is this one.](https://seanblanchfield.com/2022/03/realtime-pip-cameras-on-tv-with-home-assistant)
 Thanks to Sean!
-And then (this HA thread)[https://community.home-assistant.io/t/a-short-guide-for-setting-up-tv-pip-notifications-with-pipup/537084/41]
+And then [this HA thread](https://community.home-assistant.io/t/a-short-guide-for-setting-up-tv-pip-notifications-with-pipup/537084/41)
 
 The idea is the following. Pipup App allows sending Notification to a corner of the TV with REST requests. This request after a few patches from forks of Pipup allow them to be with JavaScript and from a non secured HTTP source. (This is explained in the HA thread above.)
 We configure Home Assistant to send such REST request, so that we have a service in HA we can use on demand.
@@ -57,4 +57,4 @@ I would have liked Netflix to remain with sound to have the alerts. But this sol
 
 If I had it working as alerts I would also like to implement the audio detection for crying in Frigate and have the alert jumping when that happened.
 
-**Leave any comments in this Fediverse thread! [este thread del fediverso](https://social.morettigiuseppe.com/o/480a18be1fef4ffba9043e09e58b4e9a)**
+**Leave any comments in  [this Fediverse thread!](https://social.morettigiuseppe.com/o/480a18be1fef4ffba9043e09e58b4e9a)**
